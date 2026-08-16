@@ -1,0 +1,40 @@
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+ehthumbs.db
+$RECYCLE.BIN/
+*.lnk
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.classpath
+
+# Node / NPM (if you ever add npm packages)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Logs
+*.log
+logs/
+
+# Build output
+dist/
+build/
+*.crx
+*.pem
+
+# Temp files
+tmp/
+temp/
+*.tmp
+*.bak
