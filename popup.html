@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>岗位任职要求分析</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <span class="logo-icon">📊</span>
+      <span class="logo-text">岗位技能分析</span>
+    </div>
+    <div class="status" id="statusIndicator">
+      <span class="status-dot" id="statusDot"></span>
+      <span class="status-text" id="statusText">等待分析</span>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="btn btn-primary" id="analyzeBtn">
+      <span class="btn-icon">🔍</span>
+      <span class="btn-text">立即分析当前页</span>
+    </button>
+    <button class="btn btn-danger" id="clearBtn" disabled>
+      <span class="btn-icon">🗑️</span>
+      <span class="btn-text">清除数据</span>
+    </button>
+  </div>
+
+  <div class="stats-overview" id="statsOverview" style="display: none;">
+    <div class="stat-card">
+      <div class="stat-value" id="totalJobs">0</div>
+      <div class="stat-label">分析岗位数</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="totalPages">0</div>
+      <div class="stat-label">滚动页数</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="uniqueSkills">0</div>
+      <div class="stat-label">技能种类</div>
+    </div>
+  </div>
+
+  <div class="chart-section" id="skillChartSection" style="display: none;">
+    <div class="section-header">
+      <span class="section-title">📈 任职能力要求统计</span>
+      <span class="section-hint">需掌握的技能 Top 15</span>
+    </div>
+    <div class="bar-chart" id="skillChart"></div>
+  </div>
+
+  <div class="chart-section" id="responsibilityChartSection" style="display: none;">
+    <div class="section-header">
+      <span class="section-title">📋 岗位职责统计</span>
+      <span class="section-hint">日常工作内容 Top 15</span>
+    </div>
+    <div class="bar-chart" id="responsibilityChart"></div>
+  </div>
+
+  <div class="loading" id="loading" style="display: none;">
+    <div class="spinner"></div>
+    <span id="loadingText">正在分析中...</span>
+    <div class="scroll-progress" id="scrollProgress" style="display: none;">
+      <div class="scroll-bar">
+        <div class="scroll-fill" id="scrollFill"></div>
+      </div>
+      <div class="scroll-info" id="scrollInfo">0 / 30 岗位</div>
+    </div>
+  </div>
+
+  <div class="empty-state" id="emptyState">
+    <div class="empty-icon">📋</div>
+    <div class="empty-title">暂无数据</div>
+    <div class="empty-desc">
+      请在 Boss 直聘岗位列表页<br>
+      点击"立即分析当前页"按钮<br>
+      自动滚动加载 30+ 岗位进行统计
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="update-time" id="updateTime"></div>
+    <div class="version">v5.0.0</div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

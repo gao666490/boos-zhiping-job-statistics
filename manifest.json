@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Boss直聘岗位任职要求共性分析",
+  "version": "5.0.0",
+  "description": "Boss直聘岗位任职要求共性分析：滚动加载多页+详情面板提取+动词模式匹配",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.zhipin.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "岗位任职要求分析"
+  },
+  "minimum_edge_version": "88.0"
+}
